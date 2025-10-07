@@ -22,6 +22,7 @@ const PlayerCard = ({ player, setAvailableBalance, AvailableBalance,setparchased
     );
     
     setparchasedPlayer([...parchasedPlayer,playerData])
+    toast("Player Purchased!!!")
   };
 
   return (
