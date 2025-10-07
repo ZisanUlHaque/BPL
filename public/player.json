@@ -1,0 +1,98 @@
+[
+  {
+    "image": "https://i.ibb.co.com/F4G9mgLb/1696748634550-Shakib-Al-Hasan.jpg",
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "playing_role": "All-rounder",
+    "bat_style": "Left-hand bat",
+    "rating": 9.5
+  },
+  {
+    "image": "https://i.ibb.co.com/hJGRmLdB/Chris-Gayle1.jpg",
+    "name": "Chris Gayle",
+    "country": "West Indies",
+    "bat_style": "Left-hand bat",
+    "playing_role": "All-rounder",
+    "rating": 8.7
+  },
+  {
+    "image": "https://i.ibb.co.com/Mx1fzDkP/1747284415689.webp",
+    "name": "Mustafizur Rahman",
+    "country": "Bangladesh",
+    "bat_style": "Left-hand bat",
+    "playing_role": "Bowler",
+    "rating": 8.9
+  },
+  {
+    "image": "https://i.ibb.co.com/xq4M76nC/Liton-Das.jpg",
+    "name": "Liton Das",
+    "country": "Bangladesh",
+    "bat_style": "Right-hand bat",
+    "playing_role": "Wicketkeeper-Batsman",
+    "rating": 8.4
+  },
+  {
+    "image": "https://i.ibb.co.com/Y7mnJ1cH/mahmudullah-1200.webp",
+    "name": "Mahmudullah Riyad",
+    "country": "Bangladesh",
+    "bat_style": "Right-hand bat",
+    "playing_role": "All-rounder",
+    "rating": 8.3
+  },
+  {
+    "image": "https://i.ibb.co.com/Kj64P0tK/1707871298-new-project-2.jpg",
+    "name": "Andre Russell",
+    "country": "West Indies",
+    "bat_style": "Right-hand bat",
+    "playing_role": "All-rounder",
+    "rating": 9.4
+  },
+  {
+    "image": "https://i.ibb.co.com/XZzGVp7X/150781.jpg",
+    "name": "Sunil Narine",
+    "country": "West Indies",
+    "bat_style": "Left-hand bat",
+    "playing_role": "All-rounder",
+    "rating": 9.0
+  },
+  {
+    "image": "https://i.ibb.co.com/zTkRjSmb/383731-6.webp",
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "bat_style": "Right-hand bat",
+    "playing_role": "Bowler",
+    "rating": 9.6
+  },
+  {
+    "image": "https://i.ibb.co.com/nsS3jS5m/mohammad-Rizwan-1.webp",
+    "name": "Mohammad Rizwan",
+    "country": "Pakistan",
+    "bat_style": "Right-hand bat",
+    "playing_role": "Wicketkeeper-Batsman",
+    "rating": 9.2
+  },
+  {
+    "image": "https://i.ibb.co.com/BV1xyc1q/2.jpg",
+    "name": "David Miller",
+    "country": "South Africa",
+    "bat_style": "Left-hand bat",
+    "playing_role": "Batsman",
+    "rating": 8.8
+  },
+  {
+    "image": "https://i.ibb.co.com/TxJjxxnr/1753719702-a3948e6a1f9b07d619b9d07f9f723406.jpg",
+    "name": "Taskin Ahmed",
+    "country": "Bangladesh",
+    "playing_role": "Bowler",
+    "bat_style": "Right-hand bat",
+    "rating": 8.5
+  },
+  {
+    "image": "https://i.ibb.co.com/gZLkFHtb/07-699f9620f4254f2e9aae0f8fe9e580ab.jpg",
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "bat_style": "Right-hand bat",
+    "playing_role": "All-rounder",
+    "rating": 9.5
+  }
+]

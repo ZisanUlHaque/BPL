@@ -2,8 +2,21 @@ import "./App.css";
 import NavImg from "./assets/logo.png";
 import coinImg from "./assets/Currency.png";
 import heroImg from "./assets/banner-main.png";
+import AvailablePlayer from "./components/AvailablePlayers/AvailablePlayer";
+import SelectedPlayer from "./components/SelectedPlayer/SelectedPlayer";
+import { Suspense } from "react";
+
+
+const fetchPlayers = async () => {
+  const res =await fetch("/player.json")
+  return res.json()
+}
+
+
 
 function App() {
+
+  const playerPromise = fetchPlayers()
   return (
     <>
       <div className="navbar max-w-[1200px] mx-auto">
@@ -43,6 +56,12 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
+        <AvailablePlayer playerPromise={playerPromise}></AvailablePlayer>
+      </Suspense>
+
+      <SelectedPlayer></SelectedPlayer>
 
       <div className=" max-w-[1200px] mx-auto bg-gradient-to-r from-blue-100 via-white to-amber-100 rounded-3xl relative p-10 -mb-35">
         <div className="text-center grid gap-y-4">
