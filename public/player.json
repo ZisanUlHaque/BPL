@@ -5,6 +5,7 @@
     "country": "Bangladesh",
     "bat_style": "Right-hand bat",
     "playing_role": "Wicketkeeper-Batsman",
+    "price": "$130,000",
     "rating": 8.4
   },
   {
@@ -12,6 +13,7 @@
     "name": "Mohammad Rizwan",
     "country": "Pakistan",
     "bat_style": "Right-hand bat",
+    "price": "$110,000",
     "playing_role": "Wicketkeeper-Batsman",
     "rating": 9.2
   },
@@ -20,6 +22,7 @@
     "name": "David Miller",
     "country": "South Africa",
     "bat_style": "Left-hand bat",
+    "price": "$250,000",
     "playing_role": "Batsman",
     "rating": 8.8
   },
@@ -29,6 +32,7 @@
     "country": "Bangladesh",
     "playing_role": "All-rounder",
     "bat_style": "Left-hand bat",
+    "price": "$315,000",
     "rating": 9.5
   },
   {
@@ -37,6 +41,7 @@
     "country": "West Indies",
     "bat_style": "Left-hand bat",
     "playing_role": "All-rounder",
+    "price": "$200,000",
     "rating": 8.7
   },
   {
@@ -45,6 +50,7 @@
     "country": "Australia",
     "bat_style": "Right-hand bat",
     "playing_role": "All-rounder",
+    "price": "$375,000",
     "rating": 9.5
   },
 
@@ -53,6 +59,7 @@
     "name": "Mahmudullah Riyad",
     "country": "Bangladesh",
     "bat_style": "Right-hand bat",
+    "price": "$110,000",
     "playing_role": "All-rounder",
     "rating": 8.3
   },
@@ -61,6 +68,7 @@
     "name": "Andre Russell",
     "country": "West Indies",
     "bat_style": "Right-hand bat",
+    "price": "$275,000",
     "playing_role": "All-rounder",
     "rating": 9.4
   },
@@ -77,6 +85,7 @@
     "image": "https://i.ibb.co.com/Mx1fzDkP/1747284415689.webp",
     "name": "Mustafizur Rahman",
     "country": "Bangladesh",
+    "price": "$175,000",
     "bat_style": "Left-hand bat",
     "playing_role": "Bowler",
     "rating": 8.9
@@ -87,6 +96,7 @@
     "name": "Taskin Ahmed",
     "country": "Bangladesh",
     "playing_role": "Bowler",
+    "price": "$75,000",
     "bat_style": "Right-hand bat",
     "rating": 8.5
   },
@@ -95,6 +105,7 @@
     "name": "Rashid Khan",
     "country": "Afghanistan",
     "bat_style": "Right-hand bat",
+    "price": "$90,000",
     "playing_role": "Bowler",
     "rating": 9.6
   }

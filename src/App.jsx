@@ -1,10 +1,11 @@
 import "./App.css";
-import NavImg from "./assets/logo.png";
-import coinImg from "./assets/Currency.png";
+
+import NavImg from './assets/logo.png'
 import heroImg from "./assets/banner-main.png";
 import AvailablePlayer from "./components/AvailablePlayers/AvailablePlayer";
+import Navbar from "./components/Navbar/Navbar";
 import SelectedPlayer from "./components/SelectedPlayer/SelectedPlayer";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 
 
 const fetchPlayers = async () => {
@@ -13,32 +14,25 @@ const fetchPlayers = async () => {
 }
 
 
-
+  const playerPromise = fetchPlayers()
 function App() {
 
-  const playerPromise = fetchPlayers()
+  
+  const [toggle,setToggle] = useState(true)
+  const [AvailableBalance, setAvailableBalance] = useState(10000000)
+  const [parchasedPlayer, setparchasedPlayer] = useState([])
+
+
+
+  const removePlayer = (p) =>{
+    const filterData = parchasedPlayer.filter(ply => ply.name !== p.name)
+    setparchasedPlayer(filterData)
+    setAvailableBalance(AvailableBalance+parseInt(p.price.split("$").join("").split(",").join("")))
+  }
   return (
     <>
-      <div className="navbar max-w-[1200px] mx-auto">
-        <div className="lg:flex-1">
-          <a className=" text-xl">
-            <img className="w-[60px] h-[60px]" src={NavImg} alt="" />
-          </a>
-        </div>
-        <div className="text-[#131313] flex mr-8 gap-8">
-          <p>Home</p>
-          <p>Fixture</p>
-          <p>Teams</p>
-          <p>Schedules</p>
-        </div>
-        <div className="flex items-center">
-          <button className="btn rounded-3xl">
-            <span className="mr-1">0</span>
-            <span className="mr-1 font-bold">Coin</span>
-            <img src={coinImg} alt="" />
-          </button>
-        </div>
-      </div>
+
+    <Navbar AvailableBalance = {AvailableBalance}></Navbar>
 
       <div className="max-w-[1200px] mx-auto grid gap-y-5 rounded-4xl m-10 p-10 bg-gradient-to-r from-black to-emerald-950">
         <div className="flex justify-center">
@@ -50,18 +44,36 @@ function App() {
           </h1>
           <p className="text-white">Beyond Boundaries Beyond Limits</p>
           <div>
-            <button class="btn bg-[#E7FE29] rounded-3xl">
+            <button className="btn bg-[#E7FE29] rounded-3xl">
               Claim Free Credit
             </button>
           </div>
         </div>
       </div>
 
-      <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
-        <AvailablePlayer playerPromise={playerPromise}></AvailablePlayer>
-      </Suspense>
+      <div className="max-w-[1200px] mx-auto ">
+        <div className="flex justify-between items-center">
+          <h1 className="font-bold text-2xl">{
+            toggle===true ? "Available Players" : `Selected Player (${parchasedPlayer.length}/8)`
+            }</h1>
+        <div>
+          <button onClick={() => setToggle(true)} className={`py-2 px-4 border-1 border-gray-400 rounded-l-2xl border-r-0 ${toggle === true ? "bg-[#E7FE29]": " " }`}> Available</button>
+          <button onClick={() => setToggle(false)} className={`py-2 px-4 border-1 border-gray-400 rounded-r-2xl border-l-0 ${toggle === false ? "bg-[#E7FE29]": " " }`}>Selected({parchasedPlayer.length})</button>
+        </div>
+        </div>
+      </div>
 
-      <SelectedPlayer></SelectedPlayer>
+
+
+      {
+        toggle === true?<Suspense fallback={<span className="loading loading-infinity loading-xl flex justify-center max-w-[1200px] mx-auto"></span>}>
+        <AvailablePlayer parchasedPlayer={parchasedPlayer} setparchasedPlayer={setparchasedPlayer} AvailableBalance={AvailableBalance} setAvailableBalance ={setAvailableBalance} playerPromise={playerPromise}></AvailablePlayer>
+      </Suspense> : <SelectedPlayer parchasedPlayer={parchasedPlayer} removePlayer={removePlayer}></SelectedPlayer>
+      }
+
+
+
+
 
       <div className=" max-w-[1200px] mx-auto bg-gradient-to-r from-blue-100 via-white to-amber-100 rounded-3xl relative p-10 -mb-35">
         <div className="text-center grid gap-y-4">
