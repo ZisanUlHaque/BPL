@@ -1,5 +1,5 @@
 import "./App.css";
-
+import { ToastContainer } from 'react-toastify';
 import NavImg from './assets/logo.png'
 import heroImg from "./assets/banner-main.png";
 import AvailablePlayer from "./components/AvailablePlayers/AvailablePlayer";
@@ -185,6 +185,8 @@ function App() {
           </p>
         </aside>
       </footer>
+
+      <ToastContainer></ToastContainer>
     </>
   );
 }
