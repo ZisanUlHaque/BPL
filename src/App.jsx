@@ -51,10 +51,10 @@ function App() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto ">
+      <div className="max-w-[1200px] mx-2 lg:mx-auto">
         <div className="flex justify-between items-center">
-          <h1 className="font-bold text-2xl">{
-            toggle===true ? "Available Players" : `Selected Player (${parchasedPlayer.length}/8)`
+          <h1 className="font-bold text-xl lg:text-2xl">{
+            toggle===true ? "Available Players" : `Selected Player(${parchasedPlayer.length}/8)`
             }</h1>
         <div>
           <button onClick={() => setToggle(true)} className={`py-2 px-4 border-1 border-gray-400 rounded-l-2xl border-r-0 ${toggle === true ? "bg-[#E7FE29]": " " }`}> Available</button>
@@ -116,20 +116,20 @@ function App() {
         </div>
       </div>
 
-      <div className="bg-[#01092c] pt-40 mt-10">
+      <div className="bg-[#01092c] pt-40 mt-10 gap-5">
         <div className="flex justify-center pb-10">
           <img src={NavImg} alt="" />
         </div>
-        <div className="flex justify-between mx-10 pb-10">
-          <div className="text-white max-w-[400px] grid gap-y-3">
-            <h3 className="text-xl font-bold">About us</h3>
+        <div className="flex justify-between mx-2 gap-5 lg:mx-10 pb-10">
+          <div className="text-white max-w-[200px] grid gap-y-3">
+            <h3 className="text-xs lg:text-xl font-bold">About us</h3>
             <p>
               We are a passionate team dedicated to providing the best services
               to our customers.
             </p>
           </div>
           <div className="text-white grid gap-y-4">
-            <h3 className="text-xl font-bold">Links</h3>
+            <h3 className="text-xs lg:text-xl  font-bold">Links</h3>
             <ul className="list-disc">
               <li>Home</li>
               <li>Services</li>
@@ -137,9 +137,9 @@ function App() {
             </ul>
           </div>
           <div className="text-white grid gap-y-1">
-            <h3 className="text-xl font-bold">Subscribe</h3>
-            <p>Subscribe to our newsletter for the latest updates.</p>
-            <div className="join">
+            <h3 className="text-xs lg:text-xl  font-bold">Subscribe</h3>
+            <p className="max-w-[200px]">Subscribe to our newsletter for the latest updates.</p>
+            <div className="join flex flex-col lg:flex-row">
               <div>
                 <label className="input validator join-item rounded-xl">
                   <svg
